@@ -1,0 +1,8 @@
+.header {
+    padding-top: 31px;
+    &_top-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
