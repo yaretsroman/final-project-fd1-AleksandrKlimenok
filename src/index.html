@@ -9,14 +9,27 @@
   </head>
 
   <body>
-    <div id="root">
-      <p class="subtitle1">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, esse reprehenderit. Placeat
-        sed, nemo recusandae laborum quo dolorem dolores molestiae asperiores nisi vero omnis rerum
-        quam neque blanditiis, aperiam tempore consequatur voluptates delectus possimus soluta
-        voluptate? Explicabo delectus amet error repellendus itaque facilis. Iusto quidem debitis,
-        eos dolore excepturi maxime!
-      </p>
+    <div class="container">
+      <header class="header">
+        <div class="header__top-panel">
+          <form class="form">
+            <div class="form__input-wrapper form__input-wrapper--hidden">
+              <label for="search-input-id" class="form__label input-text">Search Products</label>
+              <input id="search-input-id" class="form__input" type="" />
+            </div>
+            <a href="#" class="form__icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </form>
+          <div class="logo">
+            <img src="./assets/images/logo.svg" alt="logo">
+          </div>
+          <div class="user-links">
+            <a href="/"><i class="fa-solid fa-user"></i>Account</a>
+            <a href="/"><i class="fa-solid fa-bag-shopping"></i>Shooping</a>
+          </div>
+        </div>
+      </header>
     </div>
   </body>
 </html>
