@@ -1,53 +1,55 @@
 @import '../../scss/colors.scss';
 
 .form {
-    display: flex;
-    align-items: center;
-    
-    &__icon{
-        margin-left: 15px;
-        font-size: 20px;
-        color: map-get($blackColors, 'black100');;
-    }
-    &__input-wrapper {
-        position: relative; 
-        transition: all .3s;
-        width: 100%;
-        opacity: 1;
-        &--hidden {
-            visibility: hidden;
-            width: 0;
+  display: flex;
+  align-items: center;
 
-        }
+  &__icon {
+    margin-left: 15px;
+    font-size: 20px;
+    color: map-get($blackColors, 'black100');
+    // color: map-get($primaryColors, 'primary');
+  }
+  &__input-wrapper {
+    position: relative;
+    transition: all .3s;
+    width: 100%;
+    opacity: 1;
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
     }
-   
-    &__label {
-        position: absolute;
-        top: 25%;
-        transition: .3s all;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        &--active {
-            top: -50%;
-            font-size: 14px;
-            color: map-get($darkColors, 'primary');
-        }
-    }
+  }
 
-    &__input {
-        border: none;
-        border-bottom: 2px solid map-get($darkColors, 'dark');
-        display: block;
-        width: 100%;
-        outline: none;
-        height: 32px;
-        &:focus {
-            border-bottom: 2px solid map-get($darkColors, 'primary');
-        }
+  &__label {
+    position: absolute;
+    top: 25%;
+    transition: 0.3s all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &--active {
+      top: -50%;
+      font-size: 14px;
+      color: map-get($primaryColors, 'primary');
     }
+  }
 
-    &__button {
-        border: 1px solid red;
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid map-get($darkColors, 'dark');
+    display: block;
+    width: 100%;
+    outline: none;
+    height: 32px;
+    &:focus {
+      border-bottom: 2px solid map-get($primaryColors, 'primary');
     }
+  }
+
+  &__button {
+    border: 1px solid red;
+  }
 }

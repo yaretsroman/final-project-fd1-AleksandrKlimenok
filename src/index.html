@@ -9,27 +9,54 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container">
         <div class="header__top-panel">
-          <form class="form">
+          <form class="form header__form">
             <div class="form__input-wrapper form__input-wrapper--hidden">
               <label for="search-input-id" class="form__label input-text">Search Products</label>
-              <input id="search-input-id" class="form__input" type="" />
+              <input id="search-input-id" class="form__input" type="text"/>
             </div>
             <a href="#" class="form__icon">
               <i class="fa-solid fa-magnifying-glass"></i>
             </a>
           </form>
           <div class="logo">
-            <img src="./assets/images/logo.svg" alt="logo">
+            <img src="./assets/images/logo.svg" alt="logo" />
           </div>
           <div class="user-links">
-            <a href="/"><i class="fa-solid fa-user"></i>Account</a>
-            <a href="/"><i class="fa-solid fa-bag-shopping"></i>Shooping</a>
+            <a href="/"class="button-text user-links__item">
+             <i class="fa-solid fa-user"></i>
+             Account
+            </a>
+            <a href="/"class="button-text user-links__item">
+              <i class="user-links__icon fa-solid fa-bag-shopping"></i>
+              Shooping
+            </a>
           </div>
         </div>
-      </header>
-    </div>
+        <nav class="navigation">
+          <a href="#" class="navigaion__link a">Jewelry & Accessories</a>
+          <a href="#" class="navigaion__link a">Clothing & Shoes</a>
+          <a href="#" class="navigaion__link a">Home & Living</a>
+          <a href="#" class="navigaion__link a">Wedding & Party</a>
+          <a href="#" class="navigaion__link a">Toys & Entertainment</a>
+          <a href="#" class="navigaion__link a">Art & Collectibles</a>
+          <a href="#" class="navigaion__link a">Craft Supplies & Tools</a>
+        </nav>
+
+        <div class="header-banner swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </header>
   </body>
 </html>
