@@ -37,8 +37,8 @@
   }
 
   &__input {
-    background: transparent;
     border: none;
+    background: transparent;
     border-bottom: 2px solid map-get($darkColors, 'dark');
     display: block;
     width: 100%;

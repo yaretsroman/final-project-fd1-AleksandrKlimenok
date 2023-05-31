@@ -1,0 +1,15 @@
+.header-banner {
+    min-height: 562px;
+    margin-top: 81px;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__description {
+        margin: 52px;
+    }
+    &__button {
+        margin-top: 66px;
+    }
+}
