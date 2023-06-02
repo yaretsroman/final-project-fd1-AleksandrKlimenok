@@ -8,6 +8,7 @@
   background-image: url('../../assets/images/flower-pattern.svg');
   background-repeat: no-repeat;
   background-position:center bottom;
+  background-size: contain;
   &__top-panel {
     display: flex;
     justify-content: flex-end;

@@ -8,5 +8,9 @@ import './components/form/form';
 import './components/header/header';
 import './components/navigation/navigation';
 import './components/header-banner/header-banner';
+import './components/button/button';
+import './components/top-brands/top-brands';
+import './components/hot-categories/hot-categories';
+import './components/tabs/tabs';
 
 console.log('Hello IT-academy student 🚀');
