@@ -2,30 +2,35 @@
 @import '../../scss/colors.scss';
 
 .tabs {
+  display: grid;
+  grid-template-rows: 32px 1fr;
+  grid-row-gap: 35px;
+  &__grid-wrapper {
     display: grid;
-    grid-template-rows: 32px 1fr;
-    grid-row-gap: 35px;
-    &__header {
-        display: grid;
-        grid-template-columns: 1fr max-content;
-        align-items: center;
-        grid-column-gap: 24px;
+    grid-template-columns: repeat(4, 312px);
+    grid-gap: 24px;
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    grid-column-gap: 24px;
+  }
+  &__link-wrapper {
+    display: flex;
+    grid-column-gap: 40px;
+  }
+  &__link {
+    @extend .h6;
+    color: map-get($darkColors, 'dark50');
+    &--active {
+      color: map-get($darkColors, 'dark100');
     }
-    &__link-wrapper {
-        display: flex;
-        grid-column-gap: 40px;
+  }
+  &__content {
+    display: none;
+    &--active {
+      display: block;
     }
-    &__link {
-        @extend .h6;
-        color: map-get($darkColors, 'dark50');
-        &--active {
-            color: map-get($darkColors, 'dark100')
-        }
-    }
-    &__content {
-        display: none;
-        &--active {
-            display: block;
-        }
-    }
+  }
 }

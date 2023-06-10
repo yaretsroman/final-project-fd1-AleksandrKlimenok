@@ -1,41 +1,39 @@
 .hot-categories {
-    display: grid;
-    grid-template-columns: repeat(4,1fr );
-    grid-template-rows: repeat(2, 312px);
-    grid-gap: 24px;
-    position: relative;
-    grid-template-areas: 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 312px);
+  grid-gap: 24px;
+  grid-template-areas:
     'first first second third'
-    'first first fourth fifth';
-    &__first {
-        grid-area: first;
-    }
+    'first first fourth fifth ';
+  &__first {
+    grid-area: first;
+  }
 
-    &__second {
-        grid-area: second;
-    }
+  &__second {
+    grid-area: second;
+  }
 
-    &__third {
-        grid-area: third;
-    }
+  &__third {
+    grid-area: third;
+  }
 
-    &__fourth {
-        grid-area: fourth;
-    }
+  &__fourth {
+    grid-area: fourth;
+  }
 
-    &__fifth {
-        grid-area: fifth;
-    }
+  &__fifth {
+    grid-area: fifth;
+  }
 
-    &__main {
-        position: relative;
-    }
+  &__main {
+    position: relative;
+  }
 
-   &__description {
+  &__description {
     transform: rotate(-90deg);
     position: absolute;
     left: -54%;
     top: 50%;
-   }
-
+  }
 }

@@ -5,29 +5,28 @@ $offsets: (
 );
 
 @each $key, $value in $offsets {
-    .pt-#{$key} {
-      padding-top: $value;
-    }
+  .pt-#{$key} {
+    padding-top: $value;
+  }
 }
 
 @each $key, $value in $offsets {
-    .pb-#{$key} {
-      padding-bottom: $value;
-    }
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
 }
 
 @each $key, $value in $offsets {
-    .pl-#{$key} {
-      padding-left: $value;
-    }
+  .pl-#{$key} {
+    padding-left: $value;
+  }
 }
 
 @each $key, $value in $offsets {
-    .pr-#{$key} {
-      padding-right: $value;
-    }
+  .pr-#{$key} {
+    padding-right: $value;
+  }
 }
-
 
 @each $key, $value in $offsets {
   .mt-#{$key} {
@@ -55,4 +54,11 @@ $offsets: (
 
 .text-center {
   text-align: center;
+}
+
+.responsive-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

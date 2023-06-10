@@ -8,4 +8,5 @@ new Swiper('.header-banner', {
   autoplay: {
     delay: 5000,
   },
+  slidesPerView: 1,
 });

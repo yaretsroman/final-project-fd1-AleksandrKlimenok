@@ -1,14 +1,12 @@
 @import '../../scss/colors.scss';
 
-
 .header {
   padding-top: 31px;
   background-color: map-get($blackColors, 'black5');
   min-height: 847px;
   background-image: url('../../assets/images/flower-pattern.svg');
   background-repeat: no-repeat;
-  background-position:center bottom;
-  background-size: contain;
+  background-position: center bottom;
   &__top-panel {
     display: flex;
     justify-content: flex-end;
@@ -31,10 +29,8 @@
 .user-links {
   &__item {
     margin-left: 24px;
-    text-decoration: none;
   }
   &__icon {
     margin-right: 10px;
   }
 }
-
