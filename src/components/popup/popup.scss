@@ -1,0 +1,36 @@
+@import '../../scss/colors.scss';
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: map-get($whiteColors, 'white100');
+  min-width: 520px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__header {
+    border-bottom: 1px solid map-get($blackColors, 'black50');
+    padding: 24px;
+  }
+
+  &__footer {
+    border-top: 1px solid map-get($blackColors, 'black50');
+    padding: 24px;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: map-get($blackColors, 'black50');
+}
