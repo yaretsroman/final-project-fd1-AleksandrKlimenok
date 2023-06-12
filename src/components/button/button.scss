@@ -1,0 +1,23 @@
+@import '../typography/button-text.scss';
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background: map-get($blackColors, 'black100');
+  display: flex;
+  align-items: center;
+  color: map-get($whiteColors, 'white100');
+  &--primary {
+    background: map-get($primaryColors, 'primary');
+  }
+  &--large {
+    @extend .button-text-large;
+    padding: 19px 26px 19px 29px;
+    grid-column-gap: 11px
+  }
+  &--small {
+    @extend .button-text-small;
+    padding: 5px 15px 5px 17px;
+    grid-column-gap: 6px
+  }
+}

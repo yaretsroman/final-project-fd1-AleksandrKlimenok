@@ -1,0 +1,1 @@
+import './hot-categories.scss';

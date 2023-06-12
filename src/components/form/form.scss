@@ -1,37 +1,55 @@
 @import '../../scss/colors.scss';
 
 .form {
-   &_input-wrapper {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-left: 15px;
+    font-size: 20px;
+    color: map-get($blackColors, 'black100');
+    // color: map-get($primaryColors, 'primary');
+  }
+  &__input-wrapper {
     position: relative;
-   }
-   
- &_label {
+    transition: all .3s;
+    width: 100%;
+    opacity: 1;
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+    }
+  }
+
+  &__label {
     position: absolute;
     top: 25%;
-    transition: .3s top;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    transition: 0.3s all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     &--active {
       top: -50%;
-      font-style: 14px;
-      color:
+      font-size: 14px;
+      color: map-get($primaryColors, 'primary');
     }
- }
+  }
 
- &_input {
-   bottom: none;
-    border-bottom;: 2px solid map-get(@darkColors, 'dark' )
+  &__input {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid map-get($darkColors, 'dark');
     display: block;
     width: 100%;
     outline: none;
-    padding: 0 15px;
+    height: 32px;
     &:focus {
       border-bottom: 2px solid map-get($primaryColors, 'primary');
     }
-   }
+  }
 
- &_button {
-   border: 1px solid red
+  &__button {
+    border: 1px solid red;
   }
 }
-
