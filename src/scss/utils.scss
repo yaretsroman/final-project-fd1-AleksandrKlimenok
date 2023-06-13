@@ -2,6 +2,7 @@ $offsets: (
   40: 40px,
   90: 90px,
   140: 140px,
+  55: 55px,
 );
 
 @each $key, $value in $offsets {

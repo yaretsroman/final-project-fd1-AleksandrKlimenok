@@ -3,6 +3,14 @@ import './popup.scss';
 const body = document.body;
 const controls = document.querySelectorAll('.popup-control');
 
+const createButton = (caption) => {
+  const btn = document.createElement('button');
+  btn.classList.add('popup__btn');
+  btn.textContent = caption;
+
+  return btn;
+};
+
 const createOverlay = () => {
   const overlay = document.createElement('div');
   overlay.setAttribute('class', 'popup-overlay');
@@ -25,8 +33,9 @@ const createPopupHeader = (title) => {
   return header;
 };
 
-const createPopupFooter = () => {
+const createPopupFooter = (btn) => {
   const footer = document.createElement('div');
+  footer.append(btn);
   footer.setAttribute('class', 'popup__footer');
 
   return footer;
@@ -37,8 +46,9 @@ const createPopupBlock = () => {
   popupBlock.setAttribute('class', 'popup');
 
   const setContent = (title, templateID) => {
+    const btn = createButton('Cancel');
     const template = document.getElementById(templateID).content.cloneNode(true);
-    const popupFooter = createPopupFooter();
+    const popupFooter = createPopupFooter(btn);
     const popupHeader = createPopupHeader(title);
     const popupContent = createContent(template);
     popupBlock.append(popupHeader, popupContent, popupFooter);
@@ -63,8 +73,8 @@ const open = (evt) => {
 };
 
 const close = () => {
-  overlayBlock.remove();
   popupBlock.innerHTML = '';
+  overlayBlock.remove();
   popupBlock.remove();
 };
 
@@ -81,4 +91,9 @@ controls.forEach((el) => {
 });
 
 overlayBlock.addEventListener('click', close);
+popupBlock.addEventListener('click', (evt) => {
+  if (evt.target.closest('.popup__btn')) {
+    close();
+  }
+});
 document.addEventListener('keydown', onEscape);

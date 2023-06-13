@@ -1,5 +1,27 @@
 @import '../../scss/colors.scss';
 
+@keyframes openPopup {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes showOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .popup {
   position: fixed;
   top: 50%;
@@ -10,6 +32,10 @@
   height: 300px;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
+  animation: openPopup 1s;
+  &__close {
+    animation: openPopup 1s reverse infinite;
+  }
 
   &__content {
     padding: 24px;
@@ -33,4 +59,10 @@
   right: 0;
   left: 0;
   background-color: map-get($blackColors, 'black50');
+  animation: showOverlay 1s;
+}
+
+.responsive-image-product-1 {
+  height: 60px;
+  
 }
