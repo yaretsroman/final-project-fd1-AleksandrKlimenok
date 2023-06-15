@@ -1,0 +1,54 @@
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
+.card {
+  position: relative;
+
+  &__sale-label {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background-color: map-get($blackColors, 'black100');
+    color: map-get($whiteColors, 'white100');
+    padding: 4px 12px;
+    &--hot {
+      background-color: map-get($primaryColors, 'primary');
+    }
+  }
+
+  &__title {
+    margin-top: 18px;
+    margin-bottom: 16px;
+    padding: 0 10px;
+    @include text-overflow;
+  }
+
+  &__preview {
+    height: 400px;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  &__category-name {
+    color: map-get($darkColors, 'dark50');
+    padding-right: 12px;
+    @include text-overflow;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 12px;
+    &--old {
+      color: map-get($darkColors, 'dark50');
+    }
+
+    &--sale {
+      color: map-get($primaryColors, 'primary');
+    }
+  }
+}

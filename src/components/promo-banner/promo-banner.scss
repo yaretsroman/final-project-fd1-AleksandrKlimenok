@@ -1,0 +1,23 @@
+@import '../../scss/colors.scss';
+
+.promo-banner {
+  height: 776px;
+  background: url('../../assets/images/promo/promo-second-bg.png') right 51px no-repeat,
+    url('../../assets/images/promo/promo-bg.jpg');
+
+    &__description {
+        color: map-get($whiteColors, 'white100' );
+    }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  &__container {
+    height: 100%;
+  }
+  &__block {
+    width: 504px;
+  }
+}
