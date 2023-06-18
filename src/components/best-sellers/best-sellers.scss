@@ -1,0 +1,21 @@
+@import '../../scss/colors.scss';
+
+.best-seller {
+  &__next-btn,
+  &__prev-btn {
+    &::after {
+      display: none;
+    }
+  }
+  &__next-btn {
+    background-image: url('../../assets/images/next-btn.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__prev-btn {
+    background-image: url('../../assets/images/next-btn.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-180deg);
+  }
+}

@@ -14,5 +14,7 @@ import './components/hot-categories/hot-categories';
 import './components/tabs/tabs';
 import './components/card/card';
 import './components/popup/popup';
+import './components/promo-banner/promo-banner';
+import './components/best-sellers/best-sellers';
 
 console.log('Hello IT-academy student 🚀');

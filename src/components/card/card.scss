@@ -4,6 +4,10 @@
 .card {
   position: relative;
 
+  &--in-popup {
+    text-align: center;
+  }
+
   &__sale-label {
     position: absolute;
     top: 22px;
