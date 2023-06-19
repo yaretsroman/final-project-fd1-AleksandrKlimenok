@@ -3,6 +3,11 @@ $offsets: (
   90: 90px,
   140: 140px,
   55: 55px,
+  100: 100px,
+  60: 60px,
+  70: 70px,
+  74: 74px,
+  26: 26px,
 );
 
 @each $key, $value in $offsets {

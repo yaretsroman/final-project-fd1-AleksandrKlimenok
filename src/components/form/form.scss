@@ -29,6 +29,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    color: map-get($blackColors, 'black50');
     &--active {
       top: -50%;
       font-size: 14px;

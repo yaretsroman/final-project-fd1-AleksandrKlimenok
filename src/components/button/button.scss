@@ -24,4 +24,23 @@
     padding: 5px 15px 5px 17px;
     grid-column-gap: 6px;
   }
+  &--active {
+    color: map-get($primaryColors, 'primary');
+    border-color: map-get($primaryColors, 'primary');
+  }
+  &--form {
+    @extend .button-text-small;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 6px;
+    background: none;
+    border-bottom: 2px solid map-get($blackColors, 'black100');
+    color: map-get($blackColors, 'black100');
+    padding: 0 16px 10px 16px;
+    &:hover {
+      @extend .btn--active;
+    }
+  }
 }

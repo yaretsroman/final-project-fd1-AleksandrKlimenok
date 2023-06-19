@@ -1,8 +1,8 @@
 import './tabs.scss';
 // import { products } from '../../constants/products';
 
-const tabLinks = document.querySelectorAll('.tabs__link');
-const tabContents = document.querySelectorAll('.tabs__content');
+// const tabLinks = document.querySelectorAll('.tabs__link');
+// const tabContents = document.querySelectorAll('.tabs__content');
 
 // const tabsProducts = document.querySelectorAll('.tabs-products');
 // const template = document.getElementById('template-card');
@@ -26,43 +26,43 @@ const tabContents = document.querySelectorAll('.tabs__content');
 //   });
 // };
 
-const onChangeTab = (evt) => {
-  evt.preventDefault();
+// const onChangeTab = (evt) => {
+//   evt.preventDefault();
 
-  const currentTab = evt.target.dataset.tab;
-  const contents = Array.from(tabContents);
+//   const currentTab = evt.target.dataset.tab;
+//   const contents = Array.from(tabContents);
 
-  contents.forEach((item) => {
-    item.classList.remove('tabs__content--active');
-  });
+//   contents.forEach((item) => {
+//     item.classList.remove('tabs__content--active');
+//   });
 
-  tabLinks.forEach((item) => {
-    item.classList.remove('tabs__link--active');
-  });
+//   tabLinks.forEach((item) => {
+//     item.classList.remove('tabs__link--active');
+//   });
 
-  const currentContent = contents.find((tab) => {
-    return tab.dataset.content === currentTab;
-  });
+//   const currentContent = contents.find((tab) => {
+//     return tab.dataset.content === currentTab;
+//   });
 
-  currentContent.classList.add('tabs__content--active');
+//   currentContent.classList.add('tabs__content--active');
 
-  // const wrapper = currentContent.querySelector('.tabs__grid-wrapper');
-  // wrapper.innerHTML = '';
+// const wrapper = currentContent.querySelector('.tabs__grid-wrapper');
+// wrapper.innerHTML = '';
 
-  // const filteredProducts =
-  //   currentTab === 'all'
-  //     ? products
-  //     : products.filter((products) => {
-  //         return products.categoryName.toLocaleLowerCase() === currentTab;
-  //       });
+// const filteredProducts =
+//   currentTab === 'all'
+//     ? products
+//     : products.filter((products) => {
+//         return products.categoryName.toLocaleLowerCase() === currentTab;
+//       });
 
-  // addTemplate(filteredProducts, wrapper);
-  evt.target.classList.add('tabs__link--active');
-};
+// addTemplate(filteredProducts, wrapper);
+//   evt.target.classList.add('tabs__link--active');
+// };
 
-tabLinks.forEach((el) => {
-  el.addEventListener('click', onChangeTab);
-});
+// tabLinks.forEach((el) => {
+//   el.addEventListener('click', onChangeTab);
+// });
 
 // const initTabProducts = () => {
 //   const activeTab = Array.from(tabsProducts).find((el) =>
@@ -79,3 +79,44 @@ tabLinks.forEach((el) => {
 //   .filter((item, index, arr) => arr.findIndex((el) => el === item) === index);
 
 // console.log(categories);
+
+export class Tabs {
+  constructor(otptions) {
+    this.tabLinkSelector = otptions.tabLinkSelector;
+    this.tabContentSelector = otptions.tabContentSelector;
+
+    this.init();
+  }
+
+  findTabContent = (activeTab) => {
+    const tabContets = document.querySelectorAll(this.tabContentSelector);
+    tabContets.forEach((el) => el.classList.remove('tabs__content--active'));
+    const activeTabContent = Array.from(tabContets).find((el) => {
+      return el.dataset.content === activeTab;
+    });
+
+    if (activeTabContent) {
+      activeTabContent.classList.add('tabs__content--active');
+    }
+  };
+
+  updateActiveLink = (el) => {
+    const links = document.querySelectorAll(this.tabLinkSelector);
+    links.forEach((el) => el.classList.remove('tabs__link--active'));
+
+    el.classList.add('tabs__link--active');
+  };
+
+  handleTabChange = (evt) => {
+    if (evt.target.closest(this.tabLinkSelector)) {
+      evt.preventDefault();
+      const activeTab = evt.target.dataset.tab;
+      this.findTabContent(activeTab);
+      this.updateActiveLink(evt.target);
+    }
+  };
+
+  init() {
+    document.addEventListener('click', this.handleTabChange);
+  }
+}
