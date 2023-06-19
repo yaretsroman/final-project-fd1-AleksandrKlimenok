@@ -1,7 +1,24 @@
 import './popup.scss';
+import anime from 'animejs';
+
+// anime({
+//   targets: '.popup',
+//   left: '240px',
+//   backgroundColor: '#FFF',
+//   borderRadius: ['0%', '50%'],
+//   easing: 'easeInOutQuad',
+// });
 
 const body = document.body;
 const controls = document.querySelectorAll('.popup-control');
+
+const createButton = (caption) => {
+  const btn = document.createElement('button');
+  btn.classList.add('popup__btn');
+  btn.textContent = caption;
+
+  return btn;
+};
 
 const createOverlay = () => {
   const overlay = document.createElement('div');
@@ -25,8 +42,9 @@ const createPopupHeader = (title) => {
   return header;
 };
 
-const createPopupFooter = () => {
+const createPopupFooter = (btn) => {
   const footer = document.createElement('div');
+  footer.append(btn);
   footer.setAttribute('class', 'popup__footer');
 
   return footer;
@@ -37,8 +55,9 @@ const createPopupBlock = () => {
   popupBlock.setAttribute('class', 'popup');
 
   const setContent = (title, templateID) => {
+    const btn = createButton('Cancel');
     const template = document.getElementById(templateID).content.cloneNode(true);
-    const popupFooter = createPopupFooter();
+    const popupFooter = createPopupFooter(btn);
     const popupHeader = createPopupHeader(title);
     const popupContent = createContent(template);
     popupBlock.append(popupHeader, popupContent, popupFooter);
@@ -53,19 +72,41 @@ const createPopupBlock = () => {
 const overlayBlock = createOverlay();
 const { popupBlock, setContent } = createPopupBlock();
 
+const openPopupAnimate = anime({
+  targets: popupBlock,
+  translateY: [0, '-50%'],
+  translateX: ['-50%', '-50%'],
+  easing: 'easeInOutSine',
+  duration: 500,
+  autoplay: false,
+});
+
+const closePopupAnimate = anime({
+  targets: popupBlock,
+  translateY: ['-50%', 0],
+  translateX: ['-50%', '-50%'],
+  easing: 'easeInOutSine',
+  duration: 500,
+  autoplay: false,
+  complete: () => {
+    popupBlock.innerHTML = '';
+    overlayBlock.remove();
+    popupBlock.remove();
+  },
+});
+
 const open = (evt) => {
   const title = evt.target.dataset.popupTitle;
   const tempateId = evt.target.dataset.templateId;
 
+  openPopupAnimate.play();
   setContent(title, tempateId);
   body.append(overlayBlock);
   body.append(popupBlock);
 };
 
 const close = () => {
-  overlayBlock.remove();
-  popupBlock.innerHTML = '';
-  popupBlock.remove();
+  closePopupAnimate.play();
 };
 
 const onEscape = (evt) => {
@@ -81,4 +122,9 @@ controls.forEach((el) => {
 });
 
 overlayBlock.addEventListener('click', close);
+popupBlock.addEventListener('click', (evt) => {
+  if (evt.target.closest('.popup__btn')) {
+    close();
+  }
+});
 document.addEventListener('keydown', onEscape);

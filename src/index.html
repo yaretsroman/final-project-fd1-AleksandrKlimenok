@@ -162,11 +162,13 @@
         <div class="tabs">
           <div class="tabs__header">
             <div class="tabs__link-wrapper">
-              <a href="#" class="tabs__link tabs__link--active" data-tab="all">all products</a>
-              <a href="#" class="tabs__link" data-tab="dress">Dress</a>
-              <a href="#" class="tabs__link" data-tab="scarf">Scarf</a>
-              <a href="#" class="tabs__link" data-tab="shoe">Shoe</a>
-              <a href="#" class="tabs__link" data-tab="glasses">Glasses</a>
+              <a href="#" class="tabs__link tabs-link-newsletter tabs__link--active" data-tab="all"
+                >all products</a
+              >
+              <a href="#" class="tabs__link tabs-link-newsletter" data-tab="dress">Dress</a>
+              <a href="#" class="tabs__link tabs-link-newsletter" data-tab="scarf">Scarf</a>
+              <a href="#" class="tabs__link tabs-link-newsletter" data-tab="shoe">Shoe</a>
+              <a href="#" class="tabs__link tabs-link-newsletter" data-tab="glasses">Glasses</a>
             </div>
             <button
               class="btn btn--small popup-control"
@@ -176,7 +178,81 @@
               filter
             </button>
           </div>
-          <div class="tabs__content tabs-products tabs__content--active" data-content="all">
+          <div
+            class="tabs__content tabs-content-newsletter tabs__content--active"
+            data-content="all"
+          >
+            <div class="tabs__grid-wrapper">
+              <my-card
+                title="Adicolor Classics Joggers"
+                img-url="../../assets/images/products/image-product-3.jpg"
+                category="Dress"
+                price="$63.85"
+                testCase="sadasd"
+              ></my-card>
+              <my-card
+                title="Nike Sportswear Futura Luxe"
+                img-url="../../assets/images/products/image-product-4.jpg"
+                category="Bag"
+                price="$130.00"
+                sale="true"
+                old-price="$120.00"
+              ></my-card>
+            </div>
+          </div>
+          <div class="tabs__content tabs-content-newsletter" data-content="dress">
+            <div class="tabs__grid-wrapper">
+              <div class="card">
+                <!-- <span class="card__sale-label overline">sale</span> -->
+                <img
+                  class="card__preview responsive-img"
+                  alt="Adicolor Classics Joggers"
+                  src="./assets/images/products/image-product-1.jpg"
+                />
+                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
+                <div class="card__description">
+                  <span class="span3 card__category-name">Dress</span>
+                  <div class="card__price">
+                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
+                    <span class="span1 card__price">$63.85</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <!-- <span class="card__sale-label overline">sale</span> -->
+                <img
+                  class="card__preview responsive-img"
+                  alt="Adicolor Classics Joggers"
+                  src="./assets/images/products/image-product-1.jpg"
+                />
+                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
+                <div class="card__description">
+                  <span class="span3 card__category-name">Dress</span>
+                  <div class="card__price">
+                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
+                    <span class="span1 card__price">$63.85</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <!-- <span class="card__sale-label overline">sale</span> -->
+                <img
+                  class="card__preview responsive-img"
+                  alt="Adicolor Classics Joggers"
+                  src="./assets/images/products/image-product-1.jpg"
+                />
+                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
+                <div class="card__description">
+                  <span class="span3 card__category-name">Dress</span>
+                  <div class="card__price">
+                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
+                    <span class="span1 card__price">$63.85</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__content tabs-content-newsletter" data-content="scarf">
             <div class="tabs__grid-wrapper">
               <div class="card">
                 <!-- <span class="card__sale-label overline">sale</span> -->
@@ -244,127 +320,7 @@
               </div>
             </div>
           </div>
-          <div class="tabs__content tabs-products" data-content="dress">
-            <div class="tabs__grid-wrapper">
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tabs__content tabs-products" data-content="scarf">
-            <div class="tabs__grid-wrapper">
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <!-- <span class="card__sale-label overline">sale</span> -->
-                <img
-                  class="card__preview responsive-img"
-                  alt="Adicolor Classics Joggers"
-                  src="./assets/images/products/image-product-1.jpg"
-                />
-                <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
-                <div class="card__description">
-                  <span class="span3 card__category-name">Dress</span>
-                  <div class="card__price">
-                    <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
-                    <span class="span1 card__price">$63.85</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tabs__content tabs-products" data-content="shoe">
+          <div class="tabs__content tabs-content-newsletter" data-content="shoe">
             <div class="tabs__grid-wrapper">
               <div class="card">
                 <!-- <span class="card__sale-label overline">sale</span> -->
@@ -448,7 +404,7 @@
               </div>
             </div>
           </div>
-          <div class="tabs__content tabs-products" data-content="glasses">
+          <div class="tabs__content tabs-content-newsletter" data-content="glasses">
             <div class="tabs__grid-wrapper">
               <div class="card">
                 <!-- <span class="card__sale-label overline">sale</span> -->
@@ -520,9 +476,253 @@
       </div>
     </section>
 
+    <section class="promo-banner">
+      <div class="container promo-banner__container">
+        <div class="promo-banner__wrapper">
+          <div class="promo-banner__block">
+            <img src="./assets/images/promo/promo-logo.svg" alt="promo-logo" />
+            <p class="paragraph promo-banner__description mt-55">
+              Lustrous yet understated. The new evening wear collection exclusively offered at the
+              reopened Giorgio Armani boutique in Los Angeles.
+            </p>
+            <button class="btn btn--large btn--white mt-55">see collection</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-140">
+      <h2 class="h2 text-center">Best sellers</h2>
+      <div class="container mt-40">
+        <!-- <sp-tabs selected="1" size="s" class="tabs">
+          <sp-tab class="tabs__link" label="Dress" value="1"></sp-tab>
+          <sp-tab class="tabs__link" label="Tab 2" value="2"></sp-tab>
+          <sp-tab class="tabs__link" label="Tab 3" value="3"></sp-tab>
+          <sp-tab class="tabs__link" label="Tab 4" value="4"></sp-tab>
+          <sp-tab-panel class="tabs__content" value="1">Content for Tab 1</sp-tab-panel>
+          <sp-tab-panel class="tabs__content" value="2">Content for Tab 2</sp-tab-panel>
+          <sp-tab-panel class="tabs__content" value="3">Content for Tab 3</sp-tab-panel>
+          <sp-tab-panel class="tabs__content" value="4">Content for Tab 4</sp-tab-panel>
+        </sp-tabs> -->
+        <div class="tabs tabs--d-block">
+          <div class="tabs__header">
+            <div class="tabs__link-wrapper">
+              <a href="#" class="tabs__link tabs-link-best-seller tabs__link--active" data-tab="all"
+                >all products</a
+              >
+              <a href="#" class="tabs__link tabs-link-best-seller" data-tab="dress">Dress</a>
+              <a href="#" class="tabs__link tabs-link-best-seller" data-tab="scarf">Scarf</a>
+              <a href="#" class="tabs__link tabs-link-best-seller" data-tab="shoe">Shoe</a>
+              <a href="#" class="tabs__link tabs-link-best-seller" data-tab="glasses">Glasses</a>
+            </div>
+            <button
+              class="btn btn--small popup-control"
+              data-popup-title="Hello World!!!"
+              data-template-id="filter-popup"
+            >
+              filter
+            </button>
+          </div>
+          <div
+            class="tabs__content tabs-content-best-seller tabs__content--active mt-40"
+            data-content="all"
+          >
+            <div class="best-seller-swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+              </div>
+              <div class="swiper-button-next best-seller__next-btn"></div>
+              <div class="swiper-button-prev best-seller__prev-btn"></div>
+            </div>
+          </div>
+          <div class="tabs__content tabs-content-best-seller mt-40" data-content="dress">
+            <div class="best-seller-swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+                <div class="swiper-slide">
+                  <my-card
+                    title="Adicolor Classics Joggers"
+                    img-url="../../assets/images/products/image-product-3.jpg"
+                    category="Dress"
+                    price="$63.85"
+                    testCase="sadasd"
+                  ></my-card>
+                </div>
+              </div>
+              <div class="swiper-button-next best-seller__next-btn"></div>
+              <div class="swiper-button-prev best-seller__prev-btn"></div>
+            </div>
+          </div>
+          <div class="tabs__content tabs-content-best-seller mt-40" data-content="scarf">
+            <h2>scarf</h2>
+          </div>
+          <div class="tabs__content tabs-content-best-seller mt-40" data-content="shoe">
+            <h2>shoe</h2>
+          </div>
+          <div class="tabs__content tabs-content-best-seller mt-40" data-content="glasses">
+            <h2>glasses</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-140 pt-100 pb-100 subscribe">
+      <h2 class="h2 text-center">Follow products and discounts on Instagram</h2>
+      <div class="mt-60">
+        <div class="subscribe__posts">
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-9.png"
+              alt="image-product-9"
+            />
+          </a>
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-10.png"
+              alt="image-product-9"
+            />
+          </a>
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-11.png"
+              alt="image-product-9"
+            />
+          </a>
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-12.png"
+              alt="image-product-9"
+            />
+          </a>
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-13.png"
+              alt="image-product-9"
+            />
+          </a>
+          <a href="#" class="subscribe__post-item">
+            <img
+              class="responsive-img"
+              src="./assets/images/posts/image-product-8.png"
+              alt="image-product-9"
+            />
+          </a>
+        </div>
+        <h3 class="h2 text-center mt-70">Or subscribe to the newsletter</h3>
+
+        <form class="form mt-74 subscribe__form">
+          <div class="form__input-wrapper">
+            <label for="subscribe-input-id" class="form__label input-text">Search Products</label>
+            <input id="subscribe-input-id" class="form__input" type="text" />
+          </div>
+          <button class="btn btn--form ml-26">
+            <i class="fa-regular fa-paper-plane"></i>
+            SUBMIT
+          </button>
+        </form>
+      </div>
+    </section>
+
     <template id="filter-popup">
-      <div>
-        <h1>Filter Popup</h1>
+      <div class="card card--in-popup">
+        <!-- <span class="card__sale-label overline">sale</span> -->
+        <img
+          class="card__preview"
+          alt="Adicolor Classics Joggers"
+          src="./assets/images/products/image-product-1.jpg"
+        />
+        <h3 class="h6 card__title">Adicolor Classics Joggers</h3>
+        <div class="card__description">
+          <span class="span3 card__category-name">Dress</span>
+          <div class="card__price">
+            <!-- <del class="span2 card__price card__price--old">$236.00</del> -->
+            <span class="span1 card__price">$63.85</span>
+          </div>
+        </div>
       </div>
     </template>
 

@@ -1,0 +1,18 @@
+@import '../../scss/colors.scss';
+
+.subscribe {
+    background-color: map-get($blackColors, 'black5' );
+    &__posts {
+        display: flex;
+        justify-content: center;
+        grid-column-gap: 24px;
+    }
+    &__post-item {
+        width: 200px;
+        height: 200px;
+    }
+    &__form {
+        width: 643px;
+        margin: 74px auto 0;
+    }
+}

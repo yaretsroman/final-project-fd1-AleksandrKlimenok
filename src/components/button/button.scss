@@ -10,14 +10,37 @@
   &--primary {
     background: map-get($primaryColors, 'primary');
   }
+  &--white {
+    background: map-get($whiteColors, 'white100');
+    color: map-get($blackColors, 'black100');
+  }
   &--large {
     @extend .button-text-large;
     padding: 19px 26px 19px 29px;
-    grid-column-gap: 11px
+    grid-column-gap: 11px;
   }
   &--small {
     @extend .button-text-small;
     padding: 5px 15px 5px 17px;
-    grid-column-gap: 6px
+    grid-column-gap: 6px;
+  }
+  &--active {
+    color: map-get($primaryColors, 'primary');
+    border-color: map-get($primaryColors, 'primary');
+  }
+  &--form {
+    @extend .button-text-small;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 6px;
+    background: none;
+    border-bottom: 2px solid map-get($blackColors, 'black100');
+    color: map-get($blackColors, 'black100');
+    padding: 0 16px 10px 16px;
+    &:hover {
+      @extend .btn--active;
+    }
   }
 }

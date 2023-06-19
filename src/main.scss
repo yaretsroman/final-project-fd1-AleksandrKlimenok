@@ -4,6 +4,10 @@
 @import './scss/breakpoints.scss';
 @import './scss/utils.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
@@ -13,6 +17,7 @@ body {
   color: $mainColor;
   font-family: $mainFontFamily;
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
