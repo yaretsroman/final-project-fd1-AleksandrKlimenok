@@ -1,8 +1,36 @@
+@import '../../scss/colors.scss';
+
 .header {
-    padding-top: 31px;
-    &_top-panel {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  padding-top: 31px;
+  background-color: map-get($blackColors, 'black5');
+  min-height: 847px;
+  background-image: url('../../assets/images/flower-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  &__top-panel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid $strokeColor;
+    padding-bottom: 25px;
+  }
+  &__form {
+    position: absolute;
+    left: 0;
+  }
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.user-links {
+  &__item {
+    margin-left: 24px;
+  }
+  &__icon {
+    margin-right: 10px;
+  }
 }

@@ -35,7 +35,10 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@spectrum-web-components/tabs": "^0.33.2",
     "dotenv-webpack": "^8.0.1",
-    "reset.css": "^2.0.2"
+    "reset.css": "^2.0.2",
+    "swiper": "^9.3.2"
   }
 }
