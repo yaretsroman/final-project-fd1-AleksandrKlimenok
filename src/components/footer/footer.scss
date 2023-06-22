@@ -1,0 +1,23 @@
+@import '../../scss/colors.scss';
+@import '../typography/span.scss';
+@import '../typography/button-text.scss';
+
+.footer {
+  &__bottom {
+    background-color: map-get($blackColors, 'black100');
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+  }
+  &__copyright {
+    @extend .span3;
+    color: map-get($whiteColors, 'white100');
+  }
+  &__anchor {
+    @extend .button-text-small;
+    color: map-get($whiteColors, 'white100');
+  }
+}

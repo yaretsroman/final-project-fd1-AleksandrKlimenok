@@ -1,0 +1,33 @@
+@import '../../scss/breakpoints.scss';
+
+$columnsCount: 12;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.box {
+  height: 200px;
+  background-color: red;
+}
+
+@for $i from 0 through $columnsCount {
+  .col-#{$i} {
+    flex: 0 0 calc($i / $columnsCount * 100%);
+    padding: 0 12px;
+  }
+}
+
+@each $key, $value in $breakpoints {
+  @media screen and (min-width: $value) {
+    @for $i from 1 through $columnsCount {
+      .col-#{$key}-#{$i} {
+        flex: 0 0 calc($i / $columnsCount * 100%);
+        padding: 0 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../typography/a.scss';
+@import '../../scss/colors.scss';
+
+.vertical-menu {
+  &__item {
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+  &__link {
+    @extend .a2;
+    color: map-get($blackColors, 'black100');
+  }
+}

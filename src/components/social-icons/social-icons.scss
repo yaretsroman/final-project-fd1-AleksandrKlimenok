@@ -1,0 +1,14 @@
+@import '../../scss/colors.scss';
+
+.social-icons {
+  display: flex;
+  grid-column-gap: 41px;
+  align-items: center;
+  &__item {
+    font-size: 20px;
+    color: map-get($blackColors, 'black100');
+    &:hover {
+        color: map-get($primaryColors, 'primary'); 
+    }
+  }
+}

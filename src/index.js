@@ -22,5 +22,9 @@ import './components/best-sellers/best-sellers';
 import './components/newsletter/newsletter';
 import './components/test-animate/test-animate';
 import './components/subscribe/subscribe';
+import './components/footer/footer';
+import './components/grid-system/grid-system';
+import './components/social-icons/social-icons';
+import './components/vertical-menu/vertical-menu';
 
 console.log('Hello IT-academy student 🚀');
