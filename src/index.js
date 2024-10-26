@@ -26,5 +26,6 @@ import './components/footer/footer';
 import './components/grid-system/grid-system';
 import './components/social-icons/social-icons';
 import './components/vertical-menu/vertical-menu';
+import './components/drawer/drawer';
 
 console.log('Hello IT-academy student 🚀');

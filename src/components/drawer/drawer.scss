@@ -1,0 +1,12 @@
+.drawer {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    bottom: 0;
+    width: 400px;
+    transition: left .5s;
+    &--active {
+        left: 0;
+    }
+}

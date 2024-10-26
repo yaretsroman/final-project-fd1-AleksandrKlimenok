@@ -39,6 +39,7 @@
     "@spectrum-web-components/tabs": "^0.33.2",
     "animejs": "^3.2.1",
     "dotenv-webpack": "^8.0.1",
+    "nodemailer": "^6.9.3",
     "reset.css": "^2.0.2",
     "swiper": "^9.3.2"
   }

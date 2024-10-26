@@ -7,6 +7,9 @@ $columnsCount: 12;
   flex-wrap: wrap;
   margin-right: -12px;
   margin-left: -12px;
+  &--align-center {
+    align-items: center;
+  }
 }
 
 .box {
@@ -23,10 +26,15 @@ $columnsCount: 12;
 
 @each $key, $value in $breakpoints {
   @media screen and (min-width: $value) {
-    @for $i from 1 through $columnsCount {
+    @for $i from 0 through $columnsCount {
       .col-#{$key}-#{$i} {
-        flex: 0 0 calc($i / $columnsCount * 100%);
-        padding: 0 12px;
+        @if ($i == 0) {
+          display: none;
+        } @else {
+          display: flex;
+          flex: 0 0 calc($i / $columnsCount * 100%);
+          padding: 0 12px;
+        }
       }
     }
   }
