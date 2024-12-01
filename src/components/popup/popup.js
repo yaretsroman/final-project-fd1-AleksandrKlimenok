@@ -1,5 +1,5 @@
 import './popup.scss';
-import anime from 'animejs';
+import anime from 'animejs/lib/anime.es.js';
 
 // anime({
 //   targets: '.popup',
